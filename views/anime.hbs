@@ -1,0 +1,28 @@
+{{#if found}}
+<h2>{{anime.nombre}}</h2>
+<h5>genero: {{anime.genero}}</h4>
+    <h5>año: {{anime.año}}</h5>
+    <h5>autor: {{anime.autor}}</h5>
+
+    <button onclick="deleteAnime('{{anime.id}}')" class="btn btn-danger">Eliminar</button>
+    <a class="btn btn-primary" href="/edit/{{anime.id}}" role="button">Editar</a>
+
+    <script>
+        const deleteAnime = async (id) => {
+            const confirmed = confirm('Estas seguro de eliminar ?')
+            if (confirmed) {
+                const res = await fetch(`/eliminar/${id}`, {
+                    method: 'delete'
+                })
+                if (res.ok) {
+                    window.location.href = '/'
+                }
+            } else {
+                alert('No ha sido posible eliminar')
+            }
+        }
+    </script>
+
+    {{else}}
+    <h2>Serie no encontrada</h2>
+    {{/if}}

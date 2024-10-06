@@ -1,0 +1,36 @@
+<h1>Editar {{titulo}}</h1>
+<form id="edit-anime">
+    {{>inputEdit name="nombre" type="text" defaultVal=anime.nombre}}
+    {{>inputEdit name="genero" type="text" defaultVal=anime.genero}}
+    {{>inputEdit name="año" type="text" defaultVal=anime.año}}
+    {{>inputEdit name="autor" type="text" defaultVal=anime.autor}}
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+<script>
+    const editAnime = document.getElementById("edit-anime")
+
+    editAnime.addEventListener('submit', async (e) => {
+        e.preventDefault()
+        const form = e.target
+        const data = new FormData(form);
+        const dataObj = Object.fromEntries(data)
+
+        const res = await fetch('/edit/{{anime.id}}', {
+            method: "PUT",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(dataObj)
+        })
+
+        if (res.ok) {
+            const resJson = await res.json()
+            form.reset()
+            alert("Se edito el libro")
+            return window.location.href = "/"
+        }
+
+        alert("Hubo un error")
+    })
+</script>

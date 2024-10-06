@@ -1,0 +1,10 @@
+{{#>layout}}
+<h2>{{titulo}}</h2>
+<ul>
+    {{#each anime}}
+    <a href="ver/{{@key}}">
+        <li>{{nombre}}</li>
+    </a>
+    {{/each}}
+</ul>
+{{/layout}}

@@ -1,0 +1,50 @@
+{
+  "1": {
+    "nombre": "Akira",
+    "genero": "Seinen",
+    "año": "1988",
+    "autor": "Katsuhiro Otomo"
+  },
+  "2": {
+    "nombre": "Dragon Ball",
+    "genero": "Shonen",
+    "año": "1986",
+    "autor": "Akira Toriyama"
+  },
+  "3": {
+    "nombre": "Sailor Moon",
+    "genero": "Shojo",
+    "año": "1992",
+    "autor": "Naoko Takeuchi"
+  },
+  "4": {
+    "nombre": "Naruto",
+    "genero": "Shonen",
+    "año": "2002",
+    "autor": "Masashi Kishimoto"
+  },
+  "5": {
+    "nombre": "Neon Genesis Evangelion",
+    "genero": "Mecha",
+    "año": "1995",
+    "autor": "Yoshiyuki Sadamoto"
+  },
+  "6": {
+    "nombre": "Detective Conan",
+    "genero": "Misterio",
+    "año": "1996",
+    "autor": "Yoshiyuki Sadamoto"
+  },
+  "7": {
+    "nombre": "Ranma 1/2",
+    "genero": "Romance",
+    "año": "1996",
+    "autor": "Yoshiyuki Sadamoto"
+  },
+  "8": {
+    "nombre": "Mirai Nikki",
+    "genero": "Seinen",
+    "año": "2011",
+    "autor": "Sakae Esuno"
+  }
+}
